@@ -90,3 +90,94 @@ pip install –r requirements.txt
 ```
 cat proxylist.txt | head -n 15 > proxylist2.txt
 ```
+#### 8. Build Django project
+##### 配置虚拟环境
+```
+mkdir project
+cd project
+
+python3 -m venv myvenv
+
+#Start your virtual environment
+source myvenv/bin/activate
+```
+##### 配置环境
+```
+pip install django~=1.10.0
+```
+##### create application
+```
+django-admin startproject mysite .
+```
+##### 创建更改的文件
+```
+python manage.py makemigrations
+```
+##### 将生成的py文件应用到数据库
+```
+python manage.py migrate
+```
+##### 启动server
+```
+python manage.py runserver
+```
+##### create superuser
+```
+python manage.py createsuperuser
+```
+##### 导出数据/导入数据
+```
+python manage.py dumpdata appname > appname.json
+python manage.py loaddata appname.json
+```
+#### 9. Django Rest Framwork
+pattern: **Model - Serializer - ViewSet**
+
+*Regular Experssion*
+```
+^ for the beginning of the text
+$ for the end of the text
+\d for a digit
++ to indicate that the previous item should be repeated at least once
+() to capture part of the pattern
+```
+*QuerySet*
+
+`python manage.py shell`
+
+*HTML*
+
+"glyphicon glyphicon-plus" is provided by the bootstrap theme we are using, and will display a plus sign for us
+
+{% csrf_token %} This is very important, since it makes your forms secure
+
+#### 10. Git 
+```
+git init
+git config --global user.name ""
+git config --global user.email ...
+
+want it to ignore -> create a file called .gitignore
+
+git status
+git add --all .
+git commit -m ""
+
+git remote add origin https://github.com/zoeds08/***.git
+git push -u origin master
+```
+#### 11. install brew
+`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+
+#### 12. install mongodb
+```
+brew install mongodb
+
+//when run mongodb found permission error
+sudo mkdir -p /data/db
+sudo chown -R 'id -u' /data/db
+
+//run mongodb
+mongod
+
+```

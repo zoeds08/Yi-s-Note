@@ -181,3 +181,39 @@ sudo chown -R 'id -u' /data/db
 mongod
 
 ```
+#### 13. install VM
+
+VMWARE Fusion + Ubuntu (change default settings, memory, disk, processor, set static IP)
+
+#### 14. Ubuntu terminal
+
+解压
+```
+tar -xvf file.tar
+tar -xzf file.tar
+```
+
+run .sh
+```
+sudo ./file.sh
+```
+
+删除
+```
+rm -rf file
+```
+
+可执行
+```
+chmod +x file
+```
+
+连接两个OS
+```
+ssh ip
+```
+
+convert文件from MAC to Ubuntu
+```
+scp file ip:.~/
+```

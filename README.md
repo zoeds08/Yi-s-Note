@@ -215,5 +215,5 @@ ssh ip
 
 convert文件from MAC to Ubuntu
 ```
-scp file ip:.~/
+scp -r ip:~/
 ```
